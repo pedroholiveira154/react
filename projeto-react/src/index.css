@@ -1,0 +1,10 @@
+/* ESTILO GLOBAIS */
+
+.card{
+  border: 3px solid rgb(255, 213, 149);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(255, 213, 149, 0.637);
+  background-color: white;
+}
