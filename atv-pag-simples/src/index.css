@@ -1,0 +1,88 @@
+/* ESTILO GLOBAIS */
+
+/* .card{
+  border: 3px solid rgb(255, 213, 149);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(255, 213, 149, 0.637);
+  background-color: white;
+} */
+
+
+:root{
+  --cor-vermelho-escuro: #bd0000;
+}
+/* 
+===============================
+
+    COMPONENTES BOOTSTRAP
+
+===============================
+*/
+
+/* FUNDO */
+.bg-red {
+  background-color: red;
+}
+
+.bg-dark-red{
+  background-color: #770000;
+}
+
+/* NAV */
+.nav-link {
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active {
+  color: white;
+  font-weight: bold;
+  background-color: var(--cor-vermelho-escuro);
+  border-bottom: 2px solid rgb(95, 0, 0);
+}
+
+.nav-link:hover {
+  color: white;
+  background-color: var(--cor-vermelho-escuro);
+  border-bottom: 2px solid rgb(95, 0, 0);
+}
+
+.nav-link:active {
+  color: white;
+  background-color: var(--cor-vermelho-escuro);
+  border-bottom: 2px solid rgb(95, 0, 0);
+}
+
+
+/* 
+===============================
+
+    APP
+
+===============================
+*/
+main {
+  max-height: 65vh;
+}
+
+.banner {
+  max-height: 400px;
+}
+
+.card{
+  border: none;
+}
+
+#btn-footer {
+  transition: all 0.3s ease;
+}
+
+#btn-footer:hover {
+  transform: scale(1.05);
+}
+
+#btn-footer:active {
+  transform: scale(0.95);
+}
