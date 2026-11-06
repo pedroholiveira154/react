@@ -1,37 +1,30 @@
 function Header({ setPaginaAtiva, paginaAtiva }) {
-    return (
-        <header className="container text-center bg-red p-5 d-flex flex-column gap-3 text-white">
-            <h1>FilaZero</h1>
+  const paginas = [
+    { id: "App", nome: "Início" },
+    { id: "Produtos", nome: "Funcionalidades" },
+    { id: "SobreNos", nome: "Sobre o projeto" },
+  ];
 
-            <nav className="nav justify-content-center">
+  return (
+    <header className="site-header">
+      <h1 className="site-brand">FilaZero</h1>
+      <p className="site-tagline">Mais praticidade no atendimento da cantina</p>
 
-                <a
-                    href="../App.jsx"
-                    className={`nav-link ${paginaAtiva === 'App' ? 'active' : ''}`}
-                    onClick={() => setPaginaAtiva('App')}
-                >
-                    Home
-                </a>
-
-                <a
-                    href="#"
-                    className={`nav-link ${paginaAtiva === 'Produtos' ? 'active' : ''}`}
-                    onClick={() => setPaginaAtiva('Produtos')}
-                >
-                    Produtos
-                </a>
-
-                <a
-                    href="#"
-                    className={`nav-link ${paginaAtiva === 'SobreNos' ? 'active' : ''}`}
-                    onClick={() => setPaginaAtiva('SobreNos')}
-                >
-                    Sobre Nós
-                </a>
-
-            </nav>
-        </header>
-    );
+      <nav className="nav site-nav justify-content-center" aria-label="Navegação principal">
+        {paginas.map((pagina) => (
+          <button
+            key={pagina.id}
+            type="button"
+            className={`nav-link ${paginaAtiva === pagina.id ? "active" : ""}`}
+            aria-current={paginaAtiva === pagina.id ? "page" : undefined}
+            onClick={() => setPaginaAtiva(pagina.id)}
+          >
+            {pagina.nome}
+          </button>
+        ))}
+      </nav>
+    </header>
+  );
 }
 
 export default Header;
