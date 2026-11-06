@@ -1,12 +1,12 @@
-function Card({titulo, descricao}) {
-    return (
-        <div className="col-12 col-sm-6 col-lg-4">
-            <div className="card p-3 bg-dark-red text-white">
-                <h2>{titulo}</h2>
-                <p>{descricao}</p>
-            </div>
-        </div>
-    );
+function Card({ titulo, descricao }) {
+  return (
+    <div className="col-12 col-md-6 col-lg-4">
+      <article className="feature-card">
+        <h3>{titulo}</h3>
+        <p>{descricao}</p>
+      </article>
+    </div>
+  );
 }
 
 export default Card;
