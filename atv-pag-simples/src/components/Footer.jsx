@@ -1,11 +1,11 @@
 function Footer() {
     return (
-        <footer className="container bg-red">
+        <footer className="container bg-red text-white">
             <div className="row">
 
                 {/* Coluna 1 - Company */}
-                <div className="col-3">
-                    <h4>Company</h4>
+                <div className="col-12 col-sm-6 col-lg-3">
+                    <h4>Informações</h4>
                     <a href="#">Sobre nós</a>
                     <a href="#">Contato</a>
                     <a href="#">Reservation</a>
@@ -14,11 +14,11 @@ function Footer() {
                 </div>
 
                 {/* Coluna 2 - Endereço */}
-                <div className="col-3">
+                <div className="col-12 col-sm-6 col-lg-3">
                     <h4>Endereço</h4>
                     <p>Av. Seila, Mogi das Cruzes-SP, Brasil</p>
-                    <p>+012 345 67890</p>
-                    <p>info@example.com</p>
+                    <p>+55 11 920xx-27xx</p>
+                    <p>pedro.h.oliveira@aluno.senai.br</p>
 
                     <div>
                         <a href="#"><i className="fab fa-twitter"></i></a>
@@ -29,7 +29,7 @@ function Footer() {
                 </div>
 
                 {/* Coluna 3 - Aberto */}
-                <div className="col-3">
+                <div className="col-12 col-sm-6 col-lg-3">
                     <h4>Aberto:</h4>
                     <h5>Segunda à Sexta</h5>
                     <p>09h00 - 21h00</p>
@@ -38,7 +38,7 @@ function Footer() {
                 </div>
 
                 {/* Coluna 4 - Newsletter */}
-                <div className="col-3">
+                <div className="col-12 col-sm-6 col-lg-3">
                     <h4>Newsletter</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
 
@@ -47,7 +47,7 @@ function Footer() {
                         <button type="button" id="btn-footer" className="btn btn-dark rounded">SignUp</button>
                     </div>
 
-                    <h1>😎LOGO😎</h1>
+                    <h1>FilaZero</h1>
                 </div>
 
             </div>

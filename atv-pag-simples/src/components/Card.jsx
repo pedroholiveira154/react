@@ -1,9 +1,9 @@
-function Card() {
+function Card({titulo, descricao}) {
     return (
-        <div className="col ">
-            <div className="card p-3 bg-dark-red">
-                <h2>Título do Card</h2>
-                <p>Este é um componente Card reutilizável.</p>
+        <div className="col-12 col-sm-6 col-lg-4">
+            <div className="card p-3 bg-dark-red text-white">
+                <h2>{titulo}</h2>
+                <p>{descricao}</p>
             </div>
         </div>
     );

@@ -1,18 +1,31 @@
 /* ESTILO GLOBAIS */
 
-/* .card{
-  border: 3px solid rgb(255, 213, 149);
-  border-radius: 8px;
-  padding: 16px;
-  margin: 20px 0;
-  box-shadow: 0 2px 4px rgba(255, 213, 149, 0.637);
-  background-color: white;
-} */
-
-
 :root{
   --cor-vermelho-escuro: #bd0000;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background-color: #000000;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* IMAGENS RESPONSIVAS */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* 
 ===============================
 
@@ -63,9 +76,6 @@
 
 ===============================
 */
-main {
-  max-height: 65vh;
-}
 
 .banner {
   max-height: 400px;

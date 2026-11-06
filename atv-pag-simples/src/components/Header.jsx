@@ -1,17 +1,14 @@
-import { useState } from 'react';
-
-function Header() {
-    const [paginaAtiva, setPaginaAtiva] = useState('Home');
-
+function Header({ setPaginaAtiva, paginaAtiva }) {
     return (
-        <header className="container text-center bg-red p-5 d-flex flex-column gap-3">
+        <header className="container text-center bg-red p-5 d-flex flex-column gap-3 text-white">
             <h1>FilaZero</h1>
 
             <nav className="nav justify-content-center">
+
                 <a
-                    href="#"
-                    className={`nav-link ${paginaAtiva === 'Home' ? 'active' : ''}`}
-                    onClick={() => setPaginaAtiva('Home')}
+                    href="../App.jsx"
+                    className={`nav-link ${paginaAtiva === 'App' ? 'active' : ''}`}
+                    onClick={() => setPaginaAtiva('App')}
                 >
                     Home
                 </a>
@@ -26,11 +23,12 @@ function Header() {
 
                 <a
                     href="#"
-                    className={`nav-link ${paginaAtiva === 'Sobre Nós' ? 'active' : ''}`}
-                    onClick={() => setPaginaAtiva('Sobre Nós')}
+                    className={`nav-link ${paginaAtiva === 'SobreNos' ? 'active' : ''}`}
+                    onClick={() => setPaginaAtiva('SobreNos')}
                 >
                     Sobre Nós
                 </a>
+
             </nav>
         </header>
     );
