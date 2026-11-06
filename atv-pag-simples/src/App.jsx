@@ -5,45 +5,83 @@ import Card from "./components/Card";
 import Footer from "./components/Footer";
 import Banner from "./components/Banner";
 
-import Produtos from "./pages/produtos";
+import Produtos from "./pages/Produtos";
 import SobreNos from "./pages/SobreNos";
 
-
-import './App.css'
-
 function App() {
-
-  const [paginaAtiva, setPaginaAtiva] = useState('App');
+  const [paginaAtiva, setPaginaAtiva] = useState("App");
 
   return (
-
-    <div className="m-5">
+    <div className="app-shell">
       <Header
         paginaAtiva={paginaAtiva}
         setPaginaAtiva={setPaginaAtiva}
       />
-      {paginaAtiva === 'App' && (
-        <main className="container d-flex flex-column bg-white p-5 gap-3">
+
+      {paginaAtiva === "App" && (
+        <main className="container page-content">
+          <section className="home-intro text-center">
+            <span className="section-eyebrow">Autoatendimento para cantinas</span>
+            <h2>Mais agilidade para aproveitar seu intervalo.</h2>
+            <p>
+              O FilaZero é uma proposta de sistema de autoatendimento que busca
+              tornar a compra na cantina mais simples, organizada e prática.
+            </p>
+          </section>
+
           <Banner />
-          <div className="row g-3">
-            <Card titulo="Fila" descricao="O FilaZero permite a diminuição de até 50% da espera em fileiras" />
-            <Card titulo="Praticidade" descricao="O FilaZero conta com um processo intuitivo para comprar sem dores de cabeça" />
-            <Card titulo="Pagamento" descricao="O FilaZero permite pagamentos simples e de várias formas" />
-          </div>
+
+          <section className="content-section">
+            <div className="section-heading">
+              <span className="section-eyebrow">Por que FilaZero?</span>
+              <h2>Uma experiência de compra mais simples</h2>
+              <p>
+                A proposta é reduzir etapas no atendimento presencial e dar
+                mais autonomia ao cliente durante a escolha dos produtos.
+              </p>
+            </div>
+
+            <div className="row g-4">
+              <Card
+                titulo="Mais organização"
+                descricao="O autoatendimento ajuda a organizar o fluxo de pedidos e pode contribuir para diminuir a concentração de pessoas no balcão."
+              />
+              <Card
+                titulo="Praticidade"
+                descricao="A interface foi pensada para orientar o cliente durante a consulta ao cardápio e a seleção dos itens."
+              />
+              <Card
+                titulo="Agilidade"
+                descricao="Ao permitir que o próprio cliente monte seu pedido, o sistema busca tornar o processo de compra mais ágil."
+              />
+            </div>
+          </section>
+
+          <section className="highlight-section">
+            <div>
+              <span className="section-eyebrow">Como funciona</span>
+              <h2>Da escolha à confirmação do pedido</h2>
+              <p>
+                O fluxo proposto permite consultar os produtos disponíveis,
+                selecionar os itens desejados, revisar o pedido e avançar para
+                a etapa de finalização, de acordo com os recursos implementados.
+              </p>
+            </div>
+            <ol className="steps-list">
+              <li><span>01</span> Consulte o cardápio e as categorias.</li>
+              <li><span>02</span> Escolha os produtos e monte seu pedido.</li>
+              <li><span>03</span> Revise os itens e siga para a finalização.</li>
+            </ol>
+          </section>
         </main>
-
-
       )}
 
-      {paginaAtiva === 'Produtos' && <Produtos />}
+      {paginaAtiva === "Produtos" && <Produtos />}
+      {paginaAtiva === "SobreNos" && <SobreNos />}
 
-      {paginaAtiva === 'SobreNos' && <SobreNos />}
-
-      <Footer />
+      <Footer setPaginaAtiva={setPaginaAtiva} />
     </div>
-
-  )
-
+  );
 }
 
 export default App;
