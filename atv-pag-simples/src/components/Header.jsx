@@ -1,27 +1,24 @@
-function Header({ setPaginaAtiva, paginaAtiva }) {
-  const paginas = [
-    { id: "App", nome: "Início" },
-    { id: "Produtos", nome: "Funcionalidades" },
-    { id: "SobreNos", nome: "Sobre o projeto" },
-  ];
+import { NavLink } from "react-router-dom";
 
+
+function Header() {
   return (
     <header className="site-header">
       <h1 className="site-brand">FilaZero</h1>
       <p className="site-tagline">Mais praticidade no atendimento da cantina</p>
 
       <nav className="nav site-nav justify-content-center" aria-label="Navegação principal">
-        {paginas.map((pagina) => (
-          <button
-            key={pagina.id}
-            type="button"
-            className={`nav-link ${paginaAtiva === pagina.id ? "active" : ""}`}
-            aria-current={paginaAtiva === pagina.id ? "page" : undefined}
-            onClick={() => setPaginaAtiva(pagina.id)}
-          >
-            {pagina.nome}
-          </button>
-        ))}
+        <NavLink to="/" className="nav-link">
+          Início
+        </NavLink>
+
+        <NavLink to="/produtos" className="nav-link">
+          Produtos
+        </NavLink>
+
+        <NavLink to="/sobre" className="nav-link">
+          Sobre o projeto
+        </NavLink>
       </nav>
     </header>
   );
